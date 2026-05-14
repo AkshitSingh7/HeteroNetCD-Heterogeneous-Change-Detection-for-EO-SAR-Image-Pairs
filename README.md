@@ -12,7 +12,7 @@ Output: 1024×1024 binary change probability map.
 ### Results
 
 | Split | IoU | Precision | Recall | F1 |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- |
 | **Validation** | 0.5781 | 0.7404 | 0.7251 | 0.7327 |
 | **Test (visible)** | 0.0474 | 0.1550 | 0.0638 | 0.0904 |
 | **Test (visible)** | 0.0983 | 0.1342 | 0.2682 | 0.1789 | 
