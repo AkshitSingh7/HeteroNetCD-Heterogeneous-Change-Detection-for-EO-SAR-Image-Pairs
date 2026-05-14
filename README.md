@@ -11,16 +11,16 @@ Output: 1024×1024 binary change probability map.
 
 ### Results
 
-| Split | IoU | Precision | Recall | F1 |
-| :--- | :--- | :--- | :--- | :--- |
-| **Validation** | 0.5781 | 0.7404 | 0.7251 | 0.7327 |
-| **Test (visible)** | 0.0474 | 0.1550 | 0.0638 | 0.0904 |
-| **Test (visible)** | 0.0983 | 0.1342 | 0.2682 | 0.1789 | 
+| Split | IoU | Precision | Recall | F1 | Threshold |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Validation** | 0.5781 | 0.7404 | 0.7251 | 0.7327 | 0.700 (val-tuned) |
+| **Test (visible)** | 0.0474 | 0.1550 | 0.0638 | 0.0904 | 0.700 (val-locked) |
+| **Test (visible)** | 0.0983 | 0.1342 | 0.2682 | 0.1789 | 0.050 (test-tuned/oracle) |
 
 **Per-Scene Breakdown (Test-Tuned @ 0.050):**
 * **Scene 09:** IoU = 0.1146 | Precision = 0.1476 | Recall = 0.3394
 * **Scene 10:** IoU = 0.0807 | Precision = 0.1180 | Recall = 0.2032
-
+  
 See the technical report (in ZIP) for the full results table, threshold sweep, and discussion of the val/test calibration gap.
 
 ## Setup
