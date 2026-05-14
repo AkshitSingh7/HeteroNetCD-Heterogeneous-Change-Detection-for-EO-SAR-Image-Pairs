@@ -36,7 +36,7 @@ That's it. The trained checkpoint contains everything else (model weights, SAR n
 Download the trained checkpoint:
 
 
-**[HeteroNetCD checkpoint (Google Drive)](INSERT_PUBLIC_LINK_HERE)** (~315 MB)
+**[HeteroNetCD checkpoint (Google Drive)](https://drive.google.com/file/d/1MqrCCYe35jRLUpY16ohPDmmhO3LgXUWu/view?usp=sharing)**
 
 Then run:
 
