@@ -35,6 +35,7 @@ That's it. The trained checkpoint contains everything else (model weights, SAR n
 
 Download the trained checkpoint:
 
+
 **[HeteroNetCD checkpoint (Google Drive)](INSERT_PUBLIC_LINK_HERE)** (~315 MB)
 
 Then run:
@@ -84,7 +85,7 @@ Or with a split subdirectory:
 
 In the second case, pass `--split test` (or `val`); the script will append the split name to `data_path`.
 
-## Training (for transparency)
+## Training
 
 The model was trained on the provided dataset with the following:
 
@@ -102,12 +103,12 @@ To reproduce training:
 python train.py --data_path /path/to/dataset
 ```
 
-This requires the SARhub MoCo weights for SAR encoder initialization (publicly available at the SARhub repository linked in the references below).
+This requires the SARhub MoCo weights for SAR encoder initialization **[LINK](https://drive.google.com/file/d/1HuzkOBHQK0NxWMKqA7ItEWifzYch2jxp/view?usp=drive_link)** .
 
 ## Hardware used
 
 - Local data inspection and preprocessing: RTX 5070 (8 GB) laptop GPU
-- Most training and inference: Google Colab free-tier T4 (16 GB)
+- Most training and inference: Google Colab free-tier T4 (16 GB) 
 - Final training run: Google Colab A100 (40 GB) for ~3 hours
 
 ## License
