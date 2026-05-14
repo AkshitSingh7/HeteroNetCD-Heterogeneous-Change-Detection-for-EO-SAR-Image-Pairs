@@ -110,19 +110,6 @@ This requires the SARhub MoCo weights for SAR encoder initialization (publicly a
 - Most training and inference: Google Colab free-tier T4 (16 GB)
 - Final training run: Google Colab A100 (40 GB) for ~3 hours
 
-## References
-
-The following publicly available resources were used:
-
-- **TorchGeo** — Stewart et al., *TorchGeo: Deep Learning With Geospatial Data*, SIGSPATIAL 2022. ([github](https://github.com/microsoft/torchgeo)) — provided SSL-pretrained ResNet50 weights on Sentinel-2 for the EO encoder.
-- **SARhub** — Wang et al., MoCo-pretrained ResNet50 on Sentinel-1. ([repo](https://github.com/sentinel-2-imageprocessing/sarhub)) — provided pretrained weights for SAR encoder initialization.
-- **segmentation_models_pytorch** — Iakubovskii, *Segmentation Models Pytorch*, 2019. ([github](https://github.com/qubvel-org/segmentation_models.pytorch)) — provided encoder loaders and UNet decoder.
-- **Lee filter** — Lee, *Digital image enhancement and noise filtering by use of local statistics*, IEEE PAMI 1980.
-- **Focal Loss** — Lin et al., *Focal Loss for Dense Object Detection*, ICCV 2017.
-- **Focal Tversky Loss** — Abraham & Khan, *A Novel Focal Tversky Loss Function*, ISBI 2019.
-
-The full technical report (in the ZIP submission) contains the complete literature survey, methodology, and analysis including alternative architectures evaluated.
-
 ## License
 
 MIT
