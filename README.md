@@ -23,6 +23,30 @@ Output: 1024×1024 binary change probability map.
   
 See the technical report (in ZIP) for the full results table, threshold sweep, and discussion of the val/test calibration gap.
 
+### Training Curves
+
+<p align="center">
+  <img src="assets/curve.png" width="850"/>
+</p>
+
+### SAR Channel Distribution
+
+<p align="center">
+  <img src="assets/sar_pixel_histograms_proper.png" width="700"/>
+</p>
+
+### Confusion Matrix (Test @ 0.05)
+
+<p align="center">
+  <img src="assets/confusion.png" width="500"/>
+</p>
+
+### Test Visualization
+
+<p align="center">
+  <img src="assets/019_scene_09_000019_building_damage.png" width="1000"/>
+</p>
+
 ## Setup
 
 ```bash
@@ -67,23 +91,38 @@ python eval.py \
 The default threshold is read from the checkpoint config. To override:
 
 ```bash
-python eval.py --weights HeteroNetCD.pt --data_path /path/to/data --threshold 0.005
+python eval.py --weights HeteroNetCD.pt --data_path /path/to/data --threshold 0.05
 ```
 
 ## Dataset structure expected
-/path/to/dataset/
-├── pre-event/      *.tif (3-channel uint8 RGB)
-├── post-event/     *.tif (1-channel uint8 SAR)
-└── target/         *.tif (1-channel uint8, 4-class, will be remapped to binary)
 
-Or with a split subdirectory:
+```text
+/path/to/dataset/
+├── pre-event/
+│   └── *.tif    (3-channel uint8 RGB)
+├── post-event/
+│   └── *.tif    (1-channel uint8 SAR)
+└── target/
+    └── *.tif    (1-channel uint8, 4-class, remapped to binary)
+```
+
+Or with split subdirectories:
+
+```text
 /path/to/dataset/
 └── test/
-├── pre-event/
-├── post-event/
-└── target/
+    ├── pre-event/
+    ├── post-event/
+    └── target/
+```
 
-In the second case, pass `--split test` (or `val`); the script will append the split name to `data_path`.
+In the second case, pass:
+
+```bash
+--split test
+```
+
+(or `val`). The script will append the split name to `data_path`.
 
 ## Training
 
