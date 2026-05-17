@@ -47,6 +47,51 @@ See the technical report (in ZIP) for the full results table, threshold sweep, a
   <img src="assets/019_scene_09_000019_building_damage.png" width="1000"/>
 </p>
 
+## Environment Setup
+
+### Option 1: Using conda (recommended)
+
+```bash
+# Create and activate a new conda environment with Python 3.11
+conda create -n heteronetcd python=3.11 -y
+conda activate heteronetcd
+
+# Clone the repository
+git clone https://github.com/AkshitSingh7/HeteroNetCD-Heterogeneous-Change-Detection-for-EO-SAR-Image-Pairs.git
+cd HeteroNetCD-Heterogeneous-Change-Detection-for-EO-SAR-Image-Pairs
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Option 2: Using venv
+
+```bash
+# Create and activate a Python 3.11 virtual environment
+python3.11 -m venv heteronetcd
+source heteronetcd/bin/activate    # on Linux/macOS
+# heteronetcd\Scripts\activate     # on Windows
+
+# Clone and install
+git clone https://github.com/AkshitSingh7/HeteroNetCD-Heterogeneous-Change-Detection-for-EO-SAR-Image-Pairs.git
+cd HeteroNetCD-Heterogeneous-Change-Detection-for-EO-SAR-Image-Pairs
+pip install -r requirements.txt
+```
+
+### Verify installation
+
+```bash
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA available:', torch.cuda.is_available())"
+```
+
+You should see PyTorch 2.0+ and CUDA available if you have an NVIDIA GPU. The model runs on CPU too but inference will be ~30× slower.
+
+### Hardware requirements
+
+- CUDA-capable NVIDIA GPU with ≥8 GB VRAM is recommended (model uses ~6 GB during inference at full resolution)
+- CPU-only is supported but slow (~10 s per 1024×1024 image vs ~0.2 s on GPU)
+- ~5 GB free disk space (checkpoint ~315 MB, dataset varies)
+  
 ## Setup
 
 ```bash
