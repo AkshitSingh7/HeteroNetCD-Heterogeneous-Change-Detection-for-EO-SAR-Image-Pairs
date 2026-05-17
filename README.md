@@ -195,6 +195,20 @@ This requires the SARhub MoCo weights for SAR encoder initialization **[LINK](ht
 - Most training and inference: Google Colab free-tier T4 (16 GB) 
 - Final training run: Google Colab A100 (40 GB) for ~3 hours
 
+## References
+
+The following publicly available resources were used in building HeteroNetCD:
+
+- **TorchGeo** — provided the SSL-pretrained ResNet50 weights on Sentinel-2 used as the EO encoder initialization. [github.com/microsoft/torchgeo](https://github.com/microsoft/torchgeo)
+- **SARhub / SSL4EO-S12** — provided the MoCo-pretrained ResNet50 weights on Sentinel-1 used as the SAR encoder initialization. [github.com/zhu-xlab/SSL4EO-S12](https://github.com/zhu-xlab/SSL4EO-S12)
+- **segmentation_models_pytorch** — provided encoder loading utilities and the UNet decoder. [github.com/qubvel-org/segmentation_models.pytorch](https://github.com/qubvel-org/segmentation_models.pytorch)
+- **albumentations** — image augmentation library. [github.com/albumentations-team/albumentations](https://github.com/albumentations-team/albumentations)
+- **Lee filter** — Lee, J.-S. *Digital image enhancement and noise filtering by use of local statistics*, IEEE PAMI 1980. Implementation via `scipy.ndimage`.
+- **Focal Loss** — Lin et al., *Focal Loss for Dense Object Detection*, ICCV 2017.
+- **Focal Tversky Loss** — Abraham & Khan, *A Novel Focal Tversky Loss Function*, ISBI 2019.
+
+The full literature survey, including the heterogeneous change detection methods reviewed and prior work considered but not adopted, is in the technical report (included in the submission ZIP).
+
 ## License
 
 MIT
