@@ -26,7 +26,7 @@ See the technical report (in ZIP) for the full results table, threshold sweep, a
 ### Training Curves
 
 <p align="center">
-  <img src="assets/curve.png" width="850"/>
+  <img src="assets/curves.png" width="850"/>
 </p>
 
 ### SAR Channel Distribution
